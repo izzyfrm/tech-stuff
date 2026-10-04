@@ -24,10 +24,11 @@ const count = document.querySelector("#emojiCount");
 let category = "All";
 let preview = "checker";
 const categories = ["All", ...new Set(emojis.map(item => item.category))];
+const categoryEmoji = { All: "✨", OS: "🖥️", AI: "🤖", Platform: "📱", Browser: "🌐", Developer: "💻", Social: "💬", Gaming: "🎮", Utility: "🧰" };
 
 function renderFilters() {
   filters.innerHTML = categories.map(item =>
-    `<button class="emoji-filter ${item === category ? "active" : ""}" data-category="${item}">${item}</button>`
+    `<button type="button" class="emoji-filter ${item === category ? "active" : ""}" data-category="${item}" aria-pressed="${item === category}">${categoryEmoji[item] || "📦"} ${item}</button>`
   ).join("");
 }
 

@@ -4,57 +4,76 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="A curated collection of the best resources for developers, AI users, and tech people." />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#090909" />
+  <meta property="og:title" content="tech-stuff — useful stuff for tech people" />
+  <meta property="og:description" content="AI tools, apps, OS resources, logos, emojis, and more — without the junk." />
   <title>tech-stuff — useful stuff for tech people</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/logo.svg" />
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#">tech-stuff<span>.</span></a>
-    <nav>
-      <a href="#resources">resources</a>
-      <a href="./emojis.html">emojis</a>
-      <a href="https://github.com/izzyfrm/tech-stuff" target="_blank" rel="noreferrer">github</a>
+    <a class="brand" href="./index.html"><img src="./assets/logo.svg" alt="" />tech-stuff<span>.</span></a>
+    <nav aria-label="Main">
+      <a href="#resources" aria-current="page">Resources</a>
+      <a href="./emojis.html">Emojis</a>
+      <a href="https://github.com/izzyfrm/tech-stuff" target="_blank" rel="noreferrer">GitHub ↗</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">curated by people who actually use this stuff</p>
+      <p class="eyebrow">✨ curated by people who actually use this stuff</p>
       <h1>The good stuff for<br><span>tech people.</span></h1>
       <p class="hero-copy">AI tools, apps, OS resources, design assets, news sources, developer tools, and more — without the junk.</p>
       <div class="hero-actions">
-        <a class="primary" href="#resources">browse resources</a>
-        <a class="secondary" href="https://github.com/izzyfrm/tech-stuff/issues" target="_blank" rel="noreferrer">suggest something</a>
+        <a class="primary" href="#resources">Browse resources</a>
+        <a class="secondary" href="./emojis.html">Grab the emojis 😎</a>
       </div>
     </section>
+
+    <div class="stack" aria-hidden="true">
+      <img src="./emojis/claude-ai.svg" alt="" />
+      <img src="./emojis/chatgpt.svg" alt="" />
+      <img src="./emojis/vscode.svg" alt="" />
+      <img src="./emojis/github.svg" alt="" />
+      <img src="./emojis/python.svg" alt="" />
+      <img src="./emojis/linux.svg" alt="" />
+      <img src="./emojis/discord.svg" alt="" />
+      <img src="./emojis/firefox.svg" alt="" />
+      <img src="./emojis/roblox.svg" alt="" />
+      <span class="more">+ 40 more logos</span>
+    </div>
 
     <section class="controls" id="resources">
       <div>
-        <p class="section-label">directory</p>
+        <p class="section-label">📚 directory</p>
         <h2>Find something useful.</h2>
       </div>
       <label class="search-wrap">
-        <span>⌕</span>
-        <input id="search" autocomplete="off" placeholder="Search tools, categories, descriptions..." />
+        <span aria-hidden="true">🔍</span>
+        <input id="search" type="search" autocomplete="off" aria-label="Search resources" placeholder="Search tools, categories, descriptions..." />
       </label>
     </section>
 
-    <div class="filters" id="filters"></div>
-    <section class="grid" id="resourceGrid" aria-live="polite"></section>
+    <div class="filter-bar">
+      <div class="filters" id="filters"></div>
+      <span class="result-count" id="resultCount" aria-live="polite"></span>
+    </div>
+    <section class="grid" id="resourceGrid"></section>
 
     <section class="submit">
       <div>
-        <p class="section-label">community maintained</p>
+        <p class="section-label">💡 community maintained</p>
         <h2>Know something better?</h2>
         <p>Open an issue and add it to the collection.</p>
       </div>
-      <a class="primary" href="https://github.com/izzyfrm/tech-stuff/issues/new" target="_blank" rel="noreferrer">submit a resource</a>
+      <a class="primary" href="https://github.com/izzyfrm/tech-stuff/issues/new" target="_blank" rel="noreferrer">Submit a resource</a>
     </section>
   </main>
 
   <footer>
-    <span>tech-stuff</span>
+    <span>tech-stuff 💚</span>
     <span>maintained by <a href="https://github.com/izzyfrm" target="_blank" rel="noreferrer">@izzyfrm</a></span>
   </footer>
 

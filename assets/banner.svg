@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-label="tech-stuff: the good stuff for tech people">
+<defs><radialGradient id="g" cx="85%" cy="0%" r="70%"><stop offset="0" stop-color="#d8ff4f" stop-opacity=".22"/><stop offset="1" stop-color="#d8ff4f" stop-opacity="0"/></radialGradient></defs>
+<rect width="1280" height="360" fill="#090909"/><rect width="1280" height="360" fill="url(#g)"/>
+<rect x=".5" y=".5" width="1279" height="359" fill="none" stroke="#242424"/>
+<g transform="translate(80 84)"><rect width="72" height="72" rx="18" fill="#d8ff4f"/><path d="M21 25l15 11-15 11" fill="none" stroke="#090909" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M41 50h13" stroke="#090909" stroke-width="7" stroke-linecap="round"/></g>
+<text x="80" y="236" fill="#f5f5f5" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="68" font-weight="700" letter-spacing="-3">The good stuff for <tspan fill="#d8ff4f">tech people.</tspan></text>
+<text x="82" y="290" fill="#969696" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24">AI tools · dev apps · OS resources · logos &amp; emojis — without the junk.</text>
+</svg>
