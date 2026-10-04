@@ -10,6 +10,7 @@
 
 <a href="https://izzyfrm.github.io/tech-stuff/"><img alt="Website" src="https://img.shields.io/badge/🌐_Website-live-d8ff4f?style=for-the-badge&labelColor=090909" /></a>
 <a href="https://izzyfrm.github.io/tech-stuff/emojis.html"><img alt="Emojis" src="https://img.shields.io/badge/😎_Emojis-58-d8ff4f?style=for-the-badge&labelColor=090909" /></a>
+<a href="https://discord.gg/R9T3vFXkje"><img alt="Join the Discord" src="https://img.shields.io/badge/Discord-Join_the_community-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=090909" /></a>
 <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/🤝_PRs-welcome-d8ff4f?style=for-the-badge&labelColor=090909" /></a>
 
 </div>
