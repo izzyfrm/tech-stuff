@@ -25,9 +25,9 @@ The website at `/emojis.html` can also export any asset as a **256×256 transpar
 
 Brand vectors are sourced from projects such as:
 
-- Simple Icons
-- Devicon
-- Lobe Icons
+- Simple Icons (v16.34, brand colors from its data)
+- Devicon (multicolor developer logos)
+- Lobe Icons (AI product logos)
 
 A few generic utility assets (such as Folder, Zip Folder, Terminal, File Explorer, and Xbox-style artwork) are maintained directly in this repository.
 
