@@ -9,7 +9,7 @@
 <br />
 
 <a href="https://izzyfrm.github.io/tech-stuff/"><img alt="Website" src="https://img.shields.io/badge/🌐_Website-live-d8ff4f?style=for-the-badge&labelColor=090909" /></a>
-<a href="https://izzyfrm.github.io/tech-stuff/emojis.html"><img alt="Emojis" src="https://img.shields.io/badge/😎_Emojis-52-d8ff4f?style=for-the-badge&labelColor=090909" /></a>
+<a href="https://izzyfrm.github.io/tech-stuff/emojis.html"><img alt="Emojis" src="https://img.shields.io/badge/😎_Emojis-58-d8ff4f?style=for-the-badge&labelColor=090909" /></a>
 <a href="CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/🤝_PRs-welcome-d8ff4f?style=for-the-badge&labelColor=090909" /></a>
 
 </div>
@@ -44,7 +44,7 @@
   <img src="emojis/youtube.svg" width="36" alt="YouTube" />
 </p>
 
-**52 transparent tech logos** as SVGs in [`/emojis`](emojis/). Use the [emoji page](https://izzyfrm.github.io/tech-stuff/emojis.html) to search them and export a **256×256 transparent PNG**, which is ready for Discord custom emojis.
+**58 transparent tech logos** as SVGs in [`/emojis`](emojis/). Use the [emoji page](https://izzyfrm.github.io/tech-stuff/emojis.html) to search them and export a **256×256 transparent PNG**, which is ready for Discord custom emojis.
 
 ## 🚀 Run it locally
 
@@ -72,7 +72,7 @@ To add a resource, add one entry to the `resources` list in [`assets/app.js`](as
 tech-stuff/
 ├─ index.html        resource directory
 ├─ emojis.html       emoji & logo library
-├─ emojis/           52 transparent SVG logos
+├─ emojis/           58 transparent SVG logos
 ├─ assets/
 │  ├─ style.css      shared styles
 │  ├─ app.js         resource list + search/filter

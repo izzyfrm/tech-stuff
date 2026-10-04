@@ -12,18 +12,18 @@ const resources = [
   { name: "Brave", category: "Apps", logo: "brave", description: "Chromium-based browser with privacy protections built in.", url: "https://brave.com/" },
   { name: "Firefox", category: "Apps", logo: "firefox", description: "Independent open-source browser with strong privacy controls and customization.", url: "https://www.mozilla.org/firefox/" },
   { name: "Discord", category: "Apps", logo: "discord", description: "Voice, text, and communities. Home to most dev, AI, and gaming servers.", url: "https://discord.com/" },
-  { name: "Hacker News", category: "News", emoji: "🟧", description: "Developer-heavy news and discussion around startups, programming, AI, and technology.", url: "https://news.ycombinator.com/" },
-  { name: "Ars Technica", category: "News", emoji: "📰", description: "Technology reporting covering software, hardware, science, security, and policy.", url: "https://arstechnica.com/" },
+  { name: "Hacker News", category: "News", logo: "hacker-news", description: "Developer-heavy news and discussion around startups, programming, AI, and technology.", url: "https://news.ycombinator.com/" },
+  { name: "Ars Technica", category: "News", logo: "ars-technica", description: "Technology reporting covering software, hardware, science, security, and policy.", url: "https://arstechnica.com/" },
   { name: "OpenAI News", category: "News", logo: "chatgpt", description: "Official product, research, and company announcements from OpenAI.", url: "https://openai.com/news/" },
   { name: "Anthropic News", category: "News", logo: "claude-ai", description: "Official Claude, research, safety, and product announcements from Anthropic.", url: "https://www.anthropic.com/news" },
-  { name: "Simple Icons", category: "Design", emoji: "🎨", description: "A massive collection of free SVG brand icons for popular tech products and services.", url: "https://simpleicons.org/" },
+  { name: "Simple Icons", category: "Design", logo: "simple-icons", description: "A massive collection of free SVG brand icons for popular tech products and services.", url: "https://simpleicons.org/" },
   { name: "SVG Repo", category: "Design", emoji: "🖼️", description: "Large collection of SVG vectors and icons for websites and projects.", url: "https://www.svgrepo.com/" },
   { name: "Linux", category: "Operating Systems", logo: "linux", description: "Open-source operating system ecosystem with distributions for nearly every kind of machine.", url: "https://www.linux.org/" },
   { name: "Windows", category: "Operating Systems", logo: "windows", description: "Microsoft's desktop operating system and the most common platform for PC software and gaming.", url: "https://www.microsoft.com/windows/" },
   { name: "macOS", category: "Operating Systems", logo: "macos", description: "Apple's desktop operating system for Mac computers, popular in software and creative workflows.", url: "https://www.apple.com/macos/" },
   { name: "GitHub", category: "Developer Tools", logo: "github", description: "Code hosting, collaboration, issues, releases, Actions, and open-source discovery.", url: "https://github.com/" },
   { name: "Git", category: "Developer Tools", logo: "git", description: "The version control system behind nearly every modern software project.", url: "https://git-scm.com/" },
-  { name: "Cloudflare", category: "Developer Tools", emoji: "☁️", description: "Web infrastructure, DNS, CDN, Workers, storage, security, and developer services.", url: "https://www.cloudflare.com/" },
+  { name: "Cloudflare", category: "Developer Tools", logo: "cloudflare", description: "Web infrastructure, DNS, CDN, Workers, storage, security, and developer services.", url: "https://www.cloudflare.com/" },
   { name: "Windows Terminal", category: "Developer Tools", logo: "terminal", description: "Modern tabbed terminal for PowerShell, Command Prompt, and WSL.", url: "https://aka.ms/terminal" },
   { name: "MDN Web Docs", category: "Learning", logo: "javascript", description: "One of the best references for HTML, CSS, JavaScript, browser APIs, and web standards.", url: "https://developer.mozilla.org/" },
   { name: "TryHackMe", category: "Learning", logo: "tryhackme", description: "Guided, hands-on cybersecurity rooms that are beginner friendly.", url: "https://tryhackme.com/" },
@@ -68,16 +68,19 @@ function renderResources() {
 
   count.textContent = `${shown.length} ${shown.length === 1 ? "resource" : "resources"}`;
 
+  const showTag = activeCategory === "All";
   grid.innerHTML = shown.length
     ? shown.map(item => `
       <a class="card" href="${item.url}" target="_blank" rel="noreferrer">
-        <div class="card-top">
+        <div class="card-head">
           <div class="icon">${iconFor(item)}</div>
-          <span class="tag">${categoryEmoji[item.category] || "📦"} ${item.category}</span>
+          <div>
+            <h3>${item.name}</h3>
+            ${showTag ? `<span class="tag">${categoryEmoji[item.category] || "📦"} ${item.category}</span>` : ""}
+          </div>
+          <span class="arrow" aria-hidden="true">↗</span>
         </div>
-        <h3>${item.name}</h3>
         <p>${item.description}</p>
-        <span class="visit">Visit ↗</span>
       </a>
     `).join("")
     : '<div class="empty">🔍 Nothing matched that search.</div>';
@@ -87,11 +90,27 @@ filters.addEventListener("click", event => {
   const button = event.target.closest("[data-category]");
   if (!button) return;
   activeCategory = button.dataset.category;
+  history.replaceState(null, "", activeCategory === "All" ? location.pathname : "#" + encodeURIComponent(activeCategory));
   renderFilters();
   renderResources();
 });
 
 search.addEventListener("input", renderResources);
+
+document.addEventListener("keydown", event => {
+  if (event.key === "/" && document.activeElement !== search && !event.metaKey && !event.ctrlKey) {
+    event.preventDefault();
+    search.focus();
+  }
+  if (event.key === "Escape" && document.activeElement === search) {
+    search.value = "";
+    search.blur();
+    renderResources();
+  }
+});
+
+const fromHash = decodeURIComponent(location.hash.slice(1));
+if (categories.includes(fromHash)) activeCategory = fromHash;
 
 renderFilters();
 renderResources();

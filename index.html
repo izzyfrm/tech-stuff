@@ -13,58 +13,37 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="./index.html"><img src="./assets/logo.svg" alt="" />tech-stuff<span>.</span></a>
-    <nav aria-label="Main">
-      <a href="#resources" aria-current="page">Resources</a>
-      <a href="./emojis.html">Emojis</a>
-      <a href="https://github.com/izzyfrm/tech-stuff" target="_blank" rel="noreferrer">GitHub ↗</a>
-    </nav>
+    <div class="header-inner">
+      <a class="brand" href="./index.html"><img src="./assets/logo.svg" alt="" />tech-stuff<span>.</span></a>
+      <nav aria-label="Main">
+        <a href="./index.html" aria-current="page">Resources</a>
+        <a href="./emojis.html">Emojis</a>
+        <a href="https://github.com/izzyfrm/tech-stuff" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero">
       <p class="eyebrow">✨ curated by people who actually use this stuff</p>
-      <h1>The good stuff for<br><span>tech people.</span></h1>
-      <p class="hero-copy">AI tools, apps, OS resources, design assets, news sources, developer tools, and more — without the junk.</p>
-      <div class="hero-actions">
-        <a class="primary" href="#resources">Browse resources</a>
-        <a class="secondary" href="./emojis.html">Grab the emojis 😎</a>
-      </div>
+      <h1>The good stuff for <span>tech people.</span></h1>
+      <p class="hero-copy">AI tools, apps, OS resources, design assets, and developer tools. No junk.</p>
     </section>
 
-    <div class="stack" aria-hidden="true">
-      <img src="./emojis/claude-ai.svg" alt="" />
-      <img src="./emojis/chatgpt.svg" alt="" />
-      <img src="./emojis/vscode.svg" alt="" />
-      <img src="./emojis/github.svg" alt="" />
-      <img src="./emojis/python.svg" alt="" />
-      <img src="./emojis/linux.svg" alt="" />
-      <img src="./emojis/discord.svg" alt="" />
-      <img src="./emojis/firefox.svg" alt="" />
-      <img src="./emojis/roblox.svg" alt="" />
-      <span class="more">+ 40 more logos</span>
-    </div>
-
-    <section class="controls" id="resources">
-      <div>
-        <p class="section-label">📚 directory</p>
-        <h2>Find something useful.</h2>
-      </div>
+    <section class="toolbar" id="resources" aria-label="Find resources">
       <label class="search-wrap">
         <span aria-hidden="true">🔍</span>
-        <input id="search" type="search" autocomplete="off" aria-label="Search resources" placeholder="Search tools, categories, descriptions..." />
+        <input id="search" type="search" autocomplete="off" aria-label="Search resources" placeholder="Search resources" />
+        <kbd aria-hidden="true">/</kbd>
       </label>
+      <div class="filters" id="filters" role="group" aria-label="Categories"></div>
     </section>
 
-    <div class="filter-bar">
-      <div class="filters" id="filters"></div>
-      <span class="result-count" id="resultCount" aria-live="polite"></span>
-    </div>
+    <p class="result-count" id="resultCount" aria-live="polite"></p>
     <section class="grid" id="resourceGrid"></section>
 
     <section class="submit">
       <div>
-        <p class="section-label">💡 community maintained</p>
         <h2>Know something better?</h2>
         <p>Open an issue and add it to the collection.</p>
       </div>

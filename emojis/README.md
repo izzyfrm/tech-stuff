@@ -10,7 +10,7 @@ The website at `/emojis.html` can also export any asset as a **256×256 transpar
 
 ## Included
 
-52 assets covering:
+58 assets covering:
 
 - operating systems
 - AI products

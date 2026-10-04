@@ -12,7 +12,8 @@ const emojis = [
   ["Xcode","Developer","xcode.svg"],["Expo Go","Developer","expo-go.svg"],["React Native","Developer","react-native.svg"],["Unity","Developer","unity.svg"],
   ["Unreal Engine","Developer","unreal-engine.svg"],["Fortnite","Gaming","fortnite.svg"],["Epic Games","Gaming","epic-games.svg"],["Xbox","Gaming","xbox.svg"],
   ["PlayStation","Gaming","playstation.svg"],["YouTube","Social","youtube.svg"],["Instagram","Social","instagram.svg"],["Snapchat","Social","snapchat.svg"],
-  ["TikTok","Social","tiktok.svg"],["DeepSeek","AI","deepseek.svg"],["Kimi AI","AI","kimi-ai.svg"],["Gemini","AI","gemini.svg"]
+  ["TikTok","Social","tiktok.svg"],["DeepSeek","AI","deepseek.svg"],["Kimi AI","AI","kimi-ai.svg"],["Gemini","AI","gemini.svg"],
+  ["React","Developer","react.svg"],["Chrome","Browser","chrome.svg"],["Cloudflare","Developer","cloudflare.svg"],["Hacker News","Social","hacker-news.svg"],["Ars Technica","Social","ars-technica.svg"],["Simple Icons","Utility","simple-icons.svg"]
 ].map(([name,category,file]) => ({ name, category, file: "./emojis/" + file }));
 
 const grid = document.querySelector("#emojiGrid");
