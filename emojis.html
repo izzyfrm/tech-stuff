@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Transparent tech emojis and logos for Discord servers, websites, profiles, and projects." />
+  <meta name="theme-color" content="#090909" />
+  <title>emojis — tech-stuff</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="stylesheet" href="./assets/emojis.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html">tech-stuff<span>.</span></a>
+    <nav>
+      <a href="./index.html">resources</a>
+      <a href="./emojis.html" aria-current="page">emojis</a>
+      <a href="https://github.com/izzyfrm/tech-stuff/tree/main/emojis" target="_blank" rel="noreferrer">github</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="emoji-hero">
+      <p class="eyebrow">transparent assets</p>
+      <h1>Tech emojis.<br><span>No background.</span></h1>
+      <p>Logos and icons for Discord servers, websites, profiles, docs, and projects. Download the original SVG or export a transparent PNG for Discord.</p>
+      <div class="emoji-stats">
+        <span><strong id="emojiCount">52</strong> assets</span>
+        <span>SVG source</span>
+        <span>PNG export</span>
+      </div>
+    </section>
+
+    <section class="emoji-toolbar">
+      <label class="emoji-search">
+        <span>⌕</span>
+        <input id="emojiSearch" type="search" autocomplete="off" placeholder="Search emojis..." />
+      </label>
+      <div class="preview-switch" aria-label="Preview background">
+        <button class="preview-button active" data-preview="checker">checker</button>
+        <button class="preview-button" data-preview="light">light</button>
+        <button class="preview-button" data-preview="dark">dark</button>
+      </div>
+    </section>
+
+    <div class="emoji-filters" id="emojiFilters"></div>
+    <section class="emoji-grid" id="emojiGrid" aria-live="polite"></section>
+
+    <section class="emoji-note">
+      <div>
+        <p class="section-label">using these assets</p>
+        <h2>Discord wants PNG, websites love SVG.</h2>
+        <p>Use <strong>PNG</strong> for Discord custom emoji uploads. Use <strong>SVG</strong> on websites when you want the sharpest possible icon.</p>
+      </div>
+      <a class="secondary" href="https://github.com/izzyfrm/tech-stuff/tree/main/emojis" target="_blank" rel="noreferrer">view source folder ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>tech-stuff / emojis</span>
+    <span>maintained by <a href="https://github.com/izzyfrm" target="_blank" rel="noreferrer">@izzyfrm</a></span>
+  </footer>
+
+  <script src="./assets/emojis.js"></script>
+</body>
+</html>

@@ -20,6 +20,10 @@ The goal is simple: **one place to find actually useful tech resources without d
 
 The site lives directly in this repository and is designed to work with GitHub Pages.
 
+### Emoji library
+
+[`emojis.html`](emojis.html) is a searchable collection of 52 transparent tech emojis. The source files live in [`/emojis`](emojis/) as SVGs, and the website can export transparent PNG versions for services such as Discord.
+
 ## Contributing
 
 Found something that belongs here? Open an issue or pull request.
@@ -38,9 +42,14 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 ```
 tech-stuff/
 ├─ index.html
+├─ emojis.html
+├─ emojis/
+│  └─ *.svg
 ├─ assets/
 │  ├─ style.css
-│  └─ app.js
+│  ├─ app.js
+│  ├─ emojis.css
+│  └─ emojis.js
 ├─ CONTRIBUTING.md
 └─ README.md
 ```
